@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'inspiration_screen.dart'; // Importa el componente InspirationScreen
 
 void main() {
