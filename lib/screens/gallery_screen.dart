@@ -1,3 +1,4 @@
+import 'package:al_moon/screens/inspiration_screen.dart';
 import 'package:al_moon/widgets/custom_elevated_button.dart';
 import 'package:al_moon/model/inspiration.dart';
 import 'package:al_moon/model/inspiration_data.dart';
@@ -8,7 +9,14 @@ import 'package:google_fonts/google_fonts.dart';
 class GalleryScreen extends StatelessWidget {
   const GalleryScreen({super.key});
 
-  void _selectInspiration(BuildContext context, Inspiration inspiration) {}
+  void _selectInspiration(BuildContext context, Inspiration inspiration) {
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (ctx) => InspirationScreen(
+        isGalleryMode: true,
+        inspiration: inspiration,
+      ),
+    ));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +30,11 @@ class GalleryScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 CustomElevatedButton(
-                icon: const Icon(Icons.arrow_back_rounded),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-              ),
+                  icon: const Icon(Icons.arrow_back_rounded),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
                 Text(
                   "inspiration gallery",
                   style: GoogleFonts.zenLoop(

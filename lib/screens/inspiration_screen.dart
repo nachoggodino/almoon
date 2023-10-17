@@ -12,15 +12,22 @@ import 'package:jiffy/jiffy.dart';
 final _random = Random();
 
 class InspirationScreen extends StatefulWidget {
-  const InspirationScreen({super.key});
+  const InspirationScreen({super.key, this.isGalleryMode = false, required this.inspiration});
+  final bool isGalleryMode;
+  final Inspiration inspiration;
 
   @override
   State<InspirationScreen> createState() => _InspirationScreenState();
 }
 
 class _InspirationScreenState extends State<InspirationScreen> {
-  Inspiration _inspiration =
-      inspirations[Jiffy.now().dayOfYear % inspirations.length];
+  late Inspiration _inspiration;
+
+  @override
+  void initState() {
+    super.initState();
+    _inspiration = widget.inspiration;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,48 +35,64 @@ class _InspirationScreenState extends State<InspirationScreen> {
       body: Stack(
         children: [
           InspirationFullscreenItem(inspiration: _inspiration),
-          Align(
-            alignment: Alignment.topRight,
-            child: Container(
-              margin: const EdgeInsets.symmetric(horizontal: 4, vertical: 56),
-              child: CustomElevatedButton(
-                icon: const Icon(Icons.collections_outlined),
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (ctx) => const GalleryScreen(),
-                    ));
-                },
+          if (!widget.isGalleryMode)
+            Align(
+              alignment: Alignment.topRight,
+              child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 4, vertical: 56),
+                child: CustomElevatedButton(
+                  icon: const Icon(Icons.collections_outlined),
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (ctx) => const GalleryScreen(),
+                      ));
+                  },
+                ),
               ),
             ),
-          ),
-          Align(
-            alignment: Alignment.topRight,
-            child: Container(
-              margin: const EdgeInsets.symmetric(horizontal: 4, vertical: 112),
-              child: CustomElevatedButton(
-                icon: const Icon(Icons.all_inclusive_rounded),
-                onPressed: () {
-                  setState(() {
-                    _inspiration =
-                        inspirations[_random.nextInt(inspirations.length)];
-                  });
-                },
+          if (widget.isGalleryMode)
+            Align(
+              alignment: Alignment.topLeft,
+              child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 4, vertical: 56),
+                child: CustomElevatedButton(
+                  icon: const Icon(Icons.arrow_back_rounded),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
               ),
             ),
-          ),
-          Align(
-            alignment: Alignment.bottomRight,
-            child: Container(
-              margin: EdgeInsets.symmetric(
-                horizontal: 20,
-                vertical: MediaQuery.of(context).viewPadding.bottom,
-              ),
-              child: Text(
-                Jiffy.now().yMMMMd,
-                style: GoogleFonts.zenLoop(fontSize: 16, color: Colors.white),
+          if (!widget.isGalleryMode)
+            Align(
+              alignment: Alignment.topRight,
+              child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 4, vertical: 112),
+                child: CustomElevatedButton(
+                  icon: const Icon(Icons.all_inclusive_rounded),
+                  onPressed: () {
+                    setState(() {
+                      _inspiration =
+                          inspirations[_random.nextInt(inspirations.length)];
+                    });
+                  },
+                ),
               ),
             ),
-          ),
+          if (!widget.isGalleryMode)
+            Align(
+              alignment: Alignment.bottomRight,
+              child: Container(
+                margin: EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: MediaQuery.of(context).viewPadding.bottom,
+                ),
+                child: Text(
+                  Jiffy.now().yMMMMd,
+                  style: GoogleFonts.zenLoop(fontSize: 16, color: Colors.white),
+                ),
+              ),
+            ),
         ],
       ),
     );
