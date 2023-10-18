@@ -12,7 +12,8 @@ import 'package:jiffy/jiffy.dart';
 final _random = Random();
 
 class InspirationScreen extends StatefulWidget {
-  const InspirationScreen({super.key, this.isGalleryMode = false, required this.inspiration});
+  const InspirationScreen(
+      {super.key, this.isGalleryMode = false, required this.inspiration});
   final bool isGalleryMode;
   final Inspiration inspiration;
 
@@ -22,6 +23,7 @@ class InspirationScreen extends StatefulWidget {
 
 class _InspirationScreenState extends State<InspirationScreen> {
   late Inspiration _inspiration;
+  final int _dayMultiplier = Jiffy.now().dayOfYear ~/ inspirations.length;
 
   @override
   void initState() {
@@ -31,6 +33,7 @@ class _InspirationScreenState extends State<InspirationScreen> {
 
   @override
   Widget build(BuildContext context) {
+    int dayOfYear = _inspiration.id + (_dayMultiplier * inspirations.length);
     return Scaffold(
       body: Stack(
         children: [
@@ -39,13 +42,16 @@ class _InspirationScreenState extends State<InspirationScreen> {
             Align(
               alignment: Alignment.topRight,
               child: Container(
-                margin: const EdgeInsets.symmetric(horizontal: 4, vertical: 56),
+                margin: EdgeInsets.symmetric(
+                  horizontal: 4,
+                  vertical: MediaQuery.of(context).viewPadding.top + 12,
+                ),
                 child: CustomElevatedButton(
                   icon: const Icon(Icons.lens_blur_rounded),
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (ctx) => const GalleryScreen(),
-                      ));
+                      builder: (ctx) => const GalleryScreen(),
+                    ));
                   },
                 ),
               ),
@@ -54,7 +60,10 @@ class _InspirationScreenState extends State<InspirationScreen> {
             Align(
               alignment: Alignment.topLeft,
               child: Container(
-                margin: const EdgeInsets.symmetric(horizontal: 4, vertical: 56),
+                margin: EdgeInsets.symmetric(
+                  horizontal: 4,
+                  vertical: MediaQuery.of(context).viewPadding.top + 12,
+                ),
                 child: CustomElevatedButton(
                   icon: const Icon(Icons.arrow_back_rounded),
                   onPressed: () {
@@ -67,7 +76,10 @@ class _InspirationScreenState extends State<InspirationScreen> {
             Align(
               alignment: Alignment.topRight,
               child: Container(
-                margin: const EdgeInsets.symmetric(horizontal: 4, vertical: 112),
+                margin: EdgeInsets.symmetric(
+                  horizontal: 4,
+                  vertical: MediaQuery.of(context).viewPadding.top + 62,
+                ),
                 child: CustomElevatedButton(
                   icon: const Icon(Icons.all_inclusive_rounded),
                   onPressed: () {
@@ -88,7 +100,11 @@ class _InspirationScreenState extends State<InspirationScreen> {
                   vertical: MediaQuery.of(context).viewPadding.bottom,
                 ),
                 child: Text(
-                  Jiffy.now().yMMMMd,
+                  Jiffy.parse(
+                    '$dayOfYear-${Jiffy.now().year}',
+                    pattern: 'D-yyyy',
+                  ).format(pattern: 'D - MMM dd yyyy'),
+                  //).yMMMMd
                   style: GoogleFonts.zenLoop(fontSize: 16, color: Colors.white),
                 ),
               ),

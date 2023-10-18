@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
               )),
       home: InspirationScreen(
           inspiration:
-              inspirations[Jiffy.now().dayOfYear % inspirations.length]),
+              inspirations[(Jiffy.now().dayOfYear - 1) % inspirations.length]),
     );
   }
 }

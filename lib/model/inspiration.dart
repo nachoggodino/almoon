@@ -1,6 +1,9 @@
 class Inspiration {
+  final int id;
   final String text;
-  final String image;
 
-  Inspiration({required this.text, required this.image});
+  Inspiration({required this.text, required this.id});
+
+  get image => "assets/$id.jpg";
+
 }
