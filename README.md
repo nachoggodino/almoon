@@ -1,16 +1,16 @@
-# al_moon
+# ALMOON
 
-A new Flutter project.
+Almoon is a Flutter project that I've started for two reasons:
 
-## Getting Started
+- To stablish my learning about Flutter & Dart
+- As a geek anniversary present for my girlfriend
 
-This project is a starting point for a Flutter application.
+## What is this project?
 
-A few resources to get you started if this is your first Flutter project:
+This project features a whole bunch of inspirational mottos, written by my girlfriend (hence the gift) the first months of the pandemic and confinement. I have paired each one of these writings with an AI generated image (thanks to Dall-E, LimeWire and Ideogram.ai) trying to represent it. The result is a pretty and minimalistic little app for her, and for everyone who wishes to test it. It will show one inspiration per day, but it will be also possible to see the entire gallery and save favorites.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Thanks for reading and I hope you enjoy it as much as I enjoyed making it. 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+And don't hesitate to learn about Flutter & Dart!
+
+I will post here in the future all the third-party libs and tools I have used.

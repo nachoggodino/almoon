@@ -41,7 +41,7 @@ class _InspirationScreenState extends State<InspirationScreen> {
               child: Container(
                 margin: const EdgeInsets.symmetric(horizontal: 4, vertical: 56),
                 child: CustomElevatedButton(
-                  icon: const Icon(Icons.collections_outlined),
+                  icon: const Icon(Icons.lens_blur_rounded),
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (ctx) => const GalleryScreen(),
