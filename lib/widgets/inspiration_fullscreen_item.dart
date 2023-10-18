@@ -8,38 +8,57 @@ class InspirationFullscreenItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage(inspiration.image),
-          fit: BoxFit.cover,
-        ),
-      ),
-      child: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                Colors.transparent,
-                Theme.of(context).colorScheme.background,
-              ]),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 30),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Text(
-                textAlign: TextAlign.center,
-                inspiration.text,
-                style: GoogleFonts.zenLoop(fontSize: 40, color: Colors.white),
+    return Stack(
+      children: [
+        Column(
+          children: [
+            Expanded(
+              child: Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(inspiration.image),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Colors.transparent,
+                          Theme.of(context).colorScheme.background,
+                        ]),
+                  ),
+                ),
               ),
-            ],
-          ),
+            ),
+            Container(
+              height: 100,
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.background
+              ),  
+            )
+          ],
         ),
-      ),
+        SizedBox(
+          width: double.infinity,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 30),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(
+                  textAlign: TextAlign.center,
+                  inspiration.text,
+                  style: GoogleFonts.zenLoop(fontSize: 40, color: Colors.white),
+                ),
+              ],
+            ),
+          ),
+        )
+      ],
     );
   }
 }
