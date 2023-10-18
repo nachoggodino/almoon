@@ -322,5 +322,105 @@ List<Inspiration> inspirations = [
     text: "Don't be afraid to start over\nThis time you're not starting from scratch,\nyou're starting from experience",
     id: 80,
   ),
+  Inspiration(
+    text: "So far you've survived 100% of your worst days",
+    id: 81,
+  ),
+  Inspiration(
+    text: "You can't change the people around you.\nBut you can change who you choose to be around",
+    id: 82,
+  ),
+  Inspiration(
+    text: "Visualize your highest self and start showing up as HER",
+    id: 83,
+  ),
+  Inspiration(
+    text: "The fear of suffering can be worse than suffering itself",
+    id: 84,
+  ),
+  Inspiration(
+    text: "If you get tired,\nlearn to rest\nNOT TO QUIT",
+    id: 85,
+  ),
+  Inspiration(
+    text: "Prove yourself to yourself,\nnot to others",
+    id: 86,
+  ),
+  Inspiration(
+    text: "Get out of your own damn way",
+    id: 87,
+  ),
+  Inspiration(
+    text: "Nothing changes\nif nothing changes",
+    id: 88,
+  ),
+  Inspiration(
+    text: "Scared?\nGOOD",
+    id: 89,
+  ),
+  Inspiration(
+    text: "We don't grow when we stay inside our confort zone",
+    id: 90,
+  ),
+  Inspiration(
+    text: "I built me",
+    id: 91,
+  ),
+  Inspiration(
+    text: "I don't care who I lose anymore",
+    id: 92,
+  ),
+  Inspiration(
+    text: "I choose ME\nI got shit to do",
+    id: 93,
+  ),
+  Inspiration(
+    text: "It's a good day to have\na GOOD DAY",
+    id: 94,
+  ),
+  Inspiration(
+    text: "You are always one decision away from a totally different life",
+    id: 95,
+  ),
+  Inspiration(
+    text: "There's nothing wrong with asking for help",
+    id: 96,
+  ),
+  Inspiration(
+    text: "Good decisions come from experience.\nExperience comes from making bad decisions",
+    id: 97,
+  ),
+  Inspiration(
+    text: "Push yourself,\nbecause no one else is going to do it for you",
+    id: 98,
+  ),
+  Inspiration(
+    text: "If you wait until you're ready, you'll be waiting for the rest of your life",
+    id: 99,
+  ),
+  Inspiration(
+    text: "Don't be afraid to fail\nbe afraid not to try",
+    id: 100,
+  ),
+  Inspiration(
+    text: "Be a warrior,\nnot a worrier",
+    id: 101,
+  ),
+  Inspiration(
+    text: "You are going to make it",
+    id: 102,
+  ),
+  Inspiration(
+    text: "As long as you know who you are, it doesn't matter how others see you",
+    id: 103,
+  ),
+  Inspiration(
+    text: "Don't wish for it\nwork for it",
+    id: 104,
+  ),
+  Inspiration(
+    text: "Stop fighting yourself\nand start fighting for yourself",
+    id: 105,
+  ),
   
 ];

@@ -23,7 +23,7 @@ class InspirationScreen extends StatefulWidget {
 
 class _InspirationScreenState extends State<InspirationScreen> {
   late Inspiration _inspiration;
-  final int _dayMultiplier = Jiffy.now().dayOfYear ~/ inspirations.length;
+  int _dayMultiplier = Jiffy.now().dayOfYear ~/ inspirations.length;
 
   @override
   void initState() {
@@ -86,6 +86,7 @@ class _InspirationScreenState extends State<InspirationScreen> {
                     setState(() {
                       _inspiration =
                           inspirations[_random.nextInt(inspirations.length)];
+                      _dayMultiplier = _random.nextInt(3); // TODO Until 122
                     });
                   },
                 ),
@@ -100,11 +101,10 @@ class _InspirationScreenState extends State<InspirationScreen> {
                   vertical: MediaQuery.of(context).viewPadding.bottom,
                 ),
                 child: Text(
-                  Jiffy.parse(
+                  '${_inspiration.id} - ${Jiffy.parse(
                     '$dayOfYear-${Jiffy.now().year}',
                     pattern: 'D-yyyy',
-                  ).format(pattern: 'D - MMM dd yyyy'),
-                  //).yMMMMd
+                  ).yMMMMd}',
                   style: GoogleFonts.zenLoop(fontSize: 16, color: Colors.white),
                 ),
               ),
