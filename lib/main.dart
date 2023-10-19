@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
           colorScheme: Theme.of(context).colorScheme.copyWith(
                 background: const Color.fromARGB(255, 27, 27, 27),
-                primary: const Color.fromARGB(255, 197, 182, 201),
+                primary: const Color.fromARGB(255, 207, 178, 206),
                 primaryContainer: const Color.fromARGB(255, 49, 41, 59),
               )),
       home: InspirationScreen(
