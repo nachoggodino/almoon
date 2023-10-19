@@ -167,7 +167,7 @@ List<Inspiration> inspirations = [
     id: 41,
   ),
   Inspiration(
-    text: "Don't stop until you're proud",
+    text: "Don't adapt to the energy in the room\nInfluence the energy in the room",
     id: 42,
   ),
   Inspiration(
@@ -239,7 +239,7 @@ List<Inspiration> inspirations = [
     id: 59,
   ),
   Inspiration(
-    text: "This will all make sense\nsomeday",
+    text: "Mistakes are proof that you are trying",
     id: 60,
   ),
   Inspiration(
@@ -421,6 +421,78 @@ List<Inspiration> inspirations = [
   Inspiration(
     text: "Stop fighting yourself\nand start fighting for yourself",
     id: 105,
+  ),
+  Inspiration(
+    text: "I'm too young to feel like I'm running out of time",
+    id: 106,
+  ),
+  Inspiration(
+    text: "Be addicted to bettering yourself",
+    id: 107,
+  ),
+  Inspiration(
+    text: "You deserve the love you keep trying to give everyone else",
+    id: 108,
+  ),
+  Inspiration(
+    text: "You'll be amazed at what you attract after you start believing in what you deserve",
+    id: 109,
+  ),
+  Inspiration(
+    text: "Don't stop until you're proud",
+    id: 110,
+  ),
+  Inspiration(
+    text: "Be the reason someone believes in good people",
+    id: 111,
+  ),
+  Inspiration(
+    text: "Whatever comes, let it come\nWhatever stays, let it stay\nWhatever goes, let it go",
+    id: 112,
+  ),
+  Inspiration(
+    text: "Forgive yourself for not knowing better until you know better",
+    id: 113,
+  ),
+  Inspiration(
+    text: "Some of the best days of our lives haven't happened yet",
+    id: 114,
+  ),
+  Inspiration(
+    text: "The world needs who you were made to be",
+    id: 115,
+  ),
+  Inspiration(
+    text: "It's okay to not do it at all",
+    id: 116,
+  ),
+  Inspiration(
+    text: "Put your positive pants on",
+    id: 117,
+  ),
+  Inspiration(
+    text: "Don't stress\nDo your best\nForget the rest",
+    id: 118,
+  ),
+  Inspiration(
+    text: "Stop setting yourself on fire to keep others warm",
+    id: 119,
+  ),
+  Inspiration(
+    text: "This will all make sense\nsomeday",
+    id: 120,
+  ),
+  Inspiration(
+    text: "RULE #1\nFuck what they think",
+    id: 121,
+  ),
+  Inspiration(
+    text: "Forget the mistake\nRemember the lesson",
+    id: 122,
+  ),
+  Inspiration(
+    text: "Wake up with determination and go to bed with satisfaction",
+    id: 123,
   ),
   
 ];
