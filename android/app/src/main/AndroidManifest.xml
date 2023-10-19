@@ -2,7 +2,7 @@
     <application
         android:label="al_moon"
         android:name="${applicationName}"
-        android:icon="@mipmap/moon_logo">
+        android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
             android:exported="true"

@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^6.1.0
   jiffy: ^6.2.1
+  flutter_native_splash: ^2.3.4
+  flutter_launcher_icons: ^0.13.1
 
 dev_dependencies:
   flutter_test:
@@ -51,7 +53,19 @@ dev_dependencies:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
+flutter_native_splash:
+  color: "#c5b6c9"
+  image: assets/moon_logo.png
+  android_12:
+    color: "#c5b6c9"
+    image: assets/moon_logo.png
 
+flutter_launcher_icons:
+  image_path: "assets/moon_logo.png"
+  android: true
+  min_sdk_android: 22
+  adaptive_icon_background: "#c5b6c9"
+  adaptive_icon_foreground: "assets/moon_logo.png"
 
 # The following section is specific to Flutter packages.
 flutter:
