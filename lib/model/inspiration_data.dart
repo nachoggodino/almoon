@@ -494,5 +494,81 @@ List<Inspiration> inspirations = [
     text: "Wake up with determination and go to bed with satisfaction",
     id: 123,
   ),
+  Inspiration(
+    text: "Don't stop chasing the night",
+    id: 124,
+  ),
+  Inspiration(
+    text: "Your anxiety is lying to you",
+    id: 125,
+  ),
+  Inspiration(
+    text: "Blooming requires going through all the seasons",
+    id: 126,
+  ),
+  Inspiration(
+    text: "I'm working ON myself\nFOR myself\nBY myself",
+    id: 127,
+  ),
+  Inspiration(
+    text: "Don't let idiots ruin your day",
+    id: 128,
+  ),
+  Inspiration(
+    text: "Take your dreams seriously",
+    id: 129,
+  ),
+  Inspiration(
+    text: "DON'T COMPARE",
+    id: 130,
+  ),
+  Inspiration(
+    text: "Be such a beautiful soul thay people crave your vibes",
+    id: 131,
+  ),
+  Inspiration(
+    text: "Stay close to people who feel like sunshine",
+    id: 132,
+  ),
+  Inspiration(
+    text: "Relax\nyou are just\nOVERTHINKING",
+    id: 133,
+  ),
+  Inspiration(
+    text: "You don't need to fullfill anyone's expecations",
+    id: 134,
+  ),
+  Inspiration(
+    text: "One bad chapter doesn't mean the story is over!!",
+    id: 135,
+  ),
+  Inspiration(
+    text: "If they want to leave,\nlet them.\n You are worth staying for",
+    id: 136,
+  ),
+  Inspiration(
+    text: "You spend most of your life inside your head...\nMake it a nice place to be",
+    id: 137,
+  ),
+  Inspiration(
+    text: "I trust the next chapter because I know the author",
+    id: 138,
+  ),
+  Inspiration(
+    text: "Your direction is more important than your speed",
+    id: 139,
+  ),
+  Inspiration(
+    text: "",
+    id: 140,
+  ),
+  Inspiration(
+    text: "",
+    id: 141,
+  ),
+  Inspiration(
+    text: "",
+    id: 142,
+  ),
   
 ];

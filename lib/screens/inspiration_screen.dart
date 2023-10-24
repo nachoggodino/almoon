@@ -86,7 +86,7 @@ class _InspirationScreenState extends State<InspirationScreen> {
                     setState(() {
                       _inspiration =
                           inspirations[_random.nextInt(inspirations.length)];
-                      _dayMultiplier = _random.nextInt(2); // TODO Until 122
+                      _dayMultiplier = _random.nextInt(2); // TODO Until 184
                     });
                   },
                 ),
@@ -101,7 +101,7 @@ class _InspirationScreenState extends State<InspirationScreen> {
                   vertical: MediaQuery.of(context).viewPadding.bottom,
                 ),
                 child: Text(
-                  '${_inspiration.id} - ${Jiffy.parse(
+                  '${_inspiration.id} · ${Jiffy.parse(
                     '$dayOfYear-${Jiffy.now().year}',
                     pattern: 'D-yyyy',
                   ).yMMMMd}',
